@@ -83,18 +83,17 @@ int main()
     cout << "Podaj typ działania ktory chcesz wykonac (+,-,=,/): ";
     cin >> znak;
 
-    if (f > 0 || f < 0) {
-        switch (znak) {
+      switch (znak) {
         case '+': cout << "wynik: " << e + f << endl; break;
         case '-': cout << "wynik: " << e - f << endl; break;
         case '*': cout << "wynik: " << e * f << endl; break;
-        case '/': cout << "wynik: " << e / f << endl; break;
+        case '/':
+            if (h > 0 || h < 0)
+                cout << "wynik: " << e / f << endl;
+            else
+                cout << "nie mozna dzielic przez 0!"; break;
         }
-    }
-    else
-        cout << "nie mozna dzielic przez 0!";
-
-
+  
     //zadanie 5
     int i;
     while (1) {
